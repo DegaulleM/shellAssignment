@@ -1,0 +1,111 @@
+#!/bin/bash
+
+echo “Shell Scripting is Fun”
+
+
+=======
+
+#!/bin/bash
+name=$(hostname)
+echo $name
+
+
+
+
+========
+
+#!/bin/bash
+file="user/dmafi/text/"
+if test -e "$file"; then
+echo "file_path paswords are enable."
+
+fi
+
+if [ -w "$file" ]
+
+then
+
+echo "you have permission to edit  $file"
+
+else
+
+echo "you do not have permission to edit $file"
+fi
+
+
+
+========
+
+
+#!/bin/bash
+DiffSpecie="man bear pig dog cat sheep"
+for Species in $DiffSpecie
+do
+  echo $DiffSpecie
+done
+
+
+
+==================
+
+#!/bin/bash
+echo "Enter name of file or directory"
+read file
+if [ -f "$file" ]
+then
+echo "$file is a regular file"
+elif [ -d "file" ]
+then
+echo "$file is a directory"
+else
+echo "$file is another type of file"
+fi
+ls -l $file
+
+========
+
+
+#!/bin/bash
+echo "Enter name of file or directory"
+file=$1
+if [ -f "$file" ]
+then
+echo "$file is a regular file"
+elif [ -d "file" ]
+then
+echo "$file is a directory"
+else
+echo "$file is another type of file"
+fi
+ls -l $file
+
+============
+#!/bin/bash
+file=$1
+if [ -f $file ]
+then
+echo "it is regular file"
+elif [ -d $file ]
+then
+echo "it is directory"
+exit 1
+else
+echo "it is another file type"
+exit 1
+fi
+===
+
+#!/bin/bash
+cat /etc/shadow
+if [ "$?" -eq "0" ]
+then
+echo "commend succeeded"
+exit 0
+else
+echo "command failed"
+exit 1
+fi
+
+
+
+
